@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="charset" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="tsedey">
+    <meta name="description" content="webpage for business">
+    <meta name="keywords" content="computer">
+    <title>computer</title>
+  <link rel="stylesheet" type="text/css" href="../css/gallarystyl.css">
+    <link rel="stylesheet" href="../CSS/popup.css">
+    <script >
+    function openNav(){
+            document.getElementById("sideNav").style.width="18%";
+            //document.body.style.marginLeft="18%";
+            document.body.style.backgroundColor="rgba(0,0,0,0.7)";
+        }
+  function closeNav(){
+            document.getElementById("sideNav").style.width="0";
+            document.body.style.marginLeft="0";
+            document.body.style.backgroundColor="white";
+        }
+
+        </script>
+    
+     <style >
+	* {
+  box-sizing:border-box;
+}
+
+body{
+font-family:"Lato", sans-serif;
+transition:background-color .5s;
+
+overflow:scroll;
+}
+ul{
+ 	list-style: none;
+ }
+ * a{
+color:white;
+text-decoration:none;
+ }
+a:visited{color:silver;}
+a:active{color:rgb(102, 255, 153);}
+
+.col-9 {width: 75%;}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row{
+padding:0;
+margin:0;
+width:100%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+@keyframes moving{
+    0%{background-size: 110% 110%;}
+    100%{background-size: 100% 100%;}
+}
+
+@keyframes logoMove{
+    0%{width:1px; height:auto;}
+    100%{ width:125px; height:auto;}
+}
+@media only screen and (max-width:600px){
+.header nav#letters{
+display:none;
+}
+.header nav#logos, nav#logos span{
+margin-left:0px;
+font-size:100%;
+}
+#span{
+position:relative;
+
+}
+}
+@media only screen and (min-width:600.99px){
+.header nav#logos{
+display:none;
+}
+}
+header{
+height:205px;
+margin:0,0,10px,0;
+padding:0,0,5px,0;
+background-color:rgba(1,1,1,.7);
+border-radius:0 0 10px 10px;
+position:fixed;
+top:0%;
+left:0;
+right:0;
+display:block;
+width:100%;
+max-width:100%;
+min-width:100%;
+max-height:205px;
+transition:margin-left .5s;
+z-index:1;
+}
+.header{
+max-height:180px;
+height: 180px;
+animation:moving 3s ;
+border-radius:0 0 10px 10px;
+clip-path:polygon(0 0, 100% 0, 100% 100%, 0 50%);
+background-image:url("../resources/images/bar.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+transition:margin-left .5s;
+padding:10px;
+margin-left:0px;
+/*background-color:rgb(80,80,80);*/
+}
+.header nav a{
+color:white;
+font-size:140%;
+font-family: Courier New, Lucida Console;
+text-shadow:1px 1px 2px #ffb03b;
+margin-left:5px;
+border-radius:20px;
+padding:7px;
+min-width:20%;
+}
+.header nav{
+max-width:50%;
+width:50%;
+float:left;
+padding:20px;
+margin-left:5px;
+}
+.header nav a:hover{
+ color:black;
+ text-shadow:1px 1px 2px #ffb03b;
+ opacity:0.8;
+ background-color:#ffb03b;
+}
+.headerShadow{
+filter:drop-shadow(5px 5px 5px rgb(80,80,80));
+}
+#Mystlogo{
+
+  border-radius: 50%;
+}
+#logo{
+top:10px;
+width:125px;
+height:auto;
+max-width:15%;
+min-width:5%;
+Border-radius:50%;
+float:right;
+background-color:rgba(210,166,121,0);
+margin-top:30px;
+margin-right:25px;
+box-shadow:5px 5px 5px black;
+position:relative;
+animation:logoMove 3s;
+}
+#Mystlogo{
+top:10px
+position:relative;
+max-width:100%;
+animation:logoMove 2.5s;
+}
+#
+#query{
+position:relative;
+width:60%;
+border-radius:18px;
+border-color:#ffb03b;
+padding:10px 10px;
+margin:5px 0;
+outline:none;
+background-color:rgba(0,0,0,.65);
+color:seashell;
+height:35px;
+}
+
+#sideNav{
+height:100%;
+width:0;
+position:fixed;
+z-index:1;
+top:0;
+left:0;
+background-color:#111;
+opacity:0.85;
+overflow-x:hidden;
+transition:0.5s;
+padding-top:60px;
+}
+#sideNav a{
+padding:8px 8px 8px 10px;
+text-align:left;
+text-decoration:none;
+font-family:poppins;
+font-size:110%;
+color:#ffb03b;
+display:block;
+transition:0.3s;
+}
+#sideNav a:hover{
+color:black;
+background-color:#ffb03b;
+opacity:0.8;
+}
+#sideNav .closebtn{
+position:absolute;
+top:0;
+right:15px;
+font-size:36px;
+margin-left:50px;
+}
+#sideNav hr{
+text-align:left;
+color:#ffb03b;
+opacity:0.6;
+width:90%;
+padding:0;
+}
+@media screen and ((max-height:450px) or (max-width:600px)){
+    #sideNav{padding-top:15px;}
+    #sideNav a{font-size:70%;}
+}
+
+#upper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(39, 37, 34, 0.8);
+  overflow: hidden;
+  padding: 0;
+}
+.ite{
+  width: 33.3;
+float: right;
+
+}
+.ite:hover img {
+  transform: scale(1.9);
+
+
+}
+#upper .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#upper .carousel-content {
+  text-align: center;
+}
+#upper h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+#upper h2 span {
+  color: #ffb03b;
+}
+#upper p {
+  width: 80%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
+#upper .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+#upper .carousel-inner .carousel-item,
+#upper .carousel-inner .active.carousel-item-start,
+#upper .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+#upper .carousel-inner .active,
+#upper .carousel-inner .carousel-item-next.carousel-item-start,
+#upper .carousel-inner .carousel-item-prev.carousel-item-end {
+font-family: 'Luxurious Roman', cursive;
+  opacity: 1;
+  transition: 0.5s;
+}
+#upper .carousel-inner .carousel-item-next,
+#upper .carousel-inner .carousel-item-prev,
+#upper .carousel-inner .active.carousel-item-start,
+#upper .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+#upper .carousel-control-next-icon, #upper .carousel-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#upper .carousel-control-next-icon:hover, #upper .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+#upper .carousel-indicators li {
+  cursor: pointer;
+}
+#upper .btn-menu, #upper .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 0 10px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  color: #fff;
+  border: 2px solid #ffb03b;
+}
+#upper .btn-menu:hover, #upper .btn-book:hover {
+  background: #ffb03b;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #upper h2 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  #upperupper p {
+    width: 50%;
+  }
+  #upperupperupper .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .book-a-table-btn {
+    margin: 0 15px 0 0;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 700px){
+	#main{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+.gallery{
+	background-color: white;
+	display: grid;
+}
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #454035;
+  border-bottom: 3px solid #454035;
+   width: 300px;
+  height: 200px;
+}
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+
+
+}
+.main{
+	display: grid;
+ 	grid-template-columns: auto auto auto;
+ 	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	column-count: 3;
+	padding: 10px;
+}
+.items{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	padding: 30px 20px;
+	background-color: white;
+
+	border-radius: 25%;  
+ 
+
+  }
+  pre{
+    color: black;
+
+  }
+}
+.items h4{
+	color:white;
+	font-family: Luxurious Roman;
+	font-size: 20px; 
+}
+.items img{
+	width: 150%;
+	height: 300px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 0.2s ease;
+	position: relative;
+	border-radius: 15%;
+	display: block;
+
+}
+
+.items:hover >img{
+	transform: scale(1.04);
+	
+}
+
+
+
+@media screen and (max-width: 700px){
+	.main{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+.details{
+	grid-template-rows: auto 1fr 20px;
+	grid-row-gap: 1px;
+	color: white;
+	vertical-align: center;
+}
+.sub-details{
+	grid-template-columns: auto auto auto;
+	text-align: left;
+}
+.sub-details h5{
+	font-weight: 1000;
+	font-size: 15px;
+}
+.sub-details .price{
+	text-align: center;
+	color: green;
+}
+
+footer{
+    box-sizing:border-box;
+    text-align: center;
+    background-color:rgba(1,1,1,.85);
+    border-radius:10px 10px 0 0;
+    color: #fff;
+    padding:0%;
+    margin:0px;
+    width:101.5%;
+    overflow:hidden;
+    position:relative;
+    top:1%;
+    left:-1%;
+    bottom:0;
+    top:80%;
+}
+.footer{
+	background-color: #24262b;
+	border-radius:15px 15px 0 0;
+    clip-path:polygon(0 70%,100% 0, 100% 100%,0 100%);
+    width:100%;
+    margin:0;
+    background-image:url("../resources/images/deliveryhead.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    box-shadow:5px 5px 5px rgb(80,80,80);
+}
+.footer p{
+font-size:20px;
+padding:1px;
+margin:1px;
+text-shadow:0px 0px 2px #ffb03b;
+}
+.followLinks{
+    font-family:courier new;
+    float:right;
+    position:relative;
+    left:15%;
+    }
+footer a{
+   text-decoration:none;
+   text-shadow:0px 0px 2px #ffb03b;
+}
+.followLinks a img{
+    width:20px;
+    height:20px;
+    z:index:1;
+}
+#tg{
+    width:20px;
+    height:20px;
+    z:index:1;
+
+}
+.followLinks a img:hover{
+    box-shadow:0px 0px 2px rgb(255,255,255);
+    transition:.3s;
+    z-index:2;
+    transform:scale(150%,150%);
+}
+#btmlinks{
+    height:23px;
+    margin-left:5%;
+}
+.feedback, .feedback a{
+    text-decoration:none;
+    font-family:courier new;
+    font-size:18px;
+    text-align:left;
+    color:#ffb03b;
+}
+.feedback address{
+    font-size:15px;
+}
+.feedback a:hover{
+    text-shadow:0px 0px 2px white;
+    }
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer.followLinks p{
+    font-size:12px;
+}
+}
+.popup {
+    opacity: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 40rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../resources/images/popup_img.jpg);
+    background-size: cover;
+    border-radius: 2rem;
+}
+
+.popup_page-content {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    margin-top: 5rem;
+    color: #928951;
+}
+
+.popup_page-close-button {
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.popupclose {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.feedback-body {
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.feedback-container {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0);
+    overflow: hidden;
+    width: 25%;
+
+}
+
+.feedback-header {
+    background-color: #ffb03b;
+    border-bottom: 1px solid black;
+    padding: 20px 40px;
+    color: black;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.feedback-header .feedback-h2 {
+    margin: 0;
+
+}
+
+.feedback-form {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    display: block;
+}
+
+.form-control .feedback-label {
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+
+.feedback-label {
+    display: flex;
+    align-items: left;
+}
+
+span.feedback-span {
+    color: #ffb03b;
+    text-align: left;
+}
+
+.feedback-form-control .feedback-input {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.feedback-form-control i {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.feedback-form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.feedback-form .feedback-button {
+    background-color: #ffb03b;
+    border: 2px solid #ffb03b;
+    font-family: inherit;
+    border-radius: 4px;
+    color: black;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    padding: 10px;
+
+
+}
+	
+    </style>
+</head>
+
+
+<body style="background-image: url('imag3.png'); ">
+    
+<header class="row">
+    <div id="sideNav">
+        <a href="javascript:void(0) " class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <li><a href="../html/home.html"> home</a></li><hr/>
+         <li><a href="../html/gallary.html">Computer Gallary</a></li><hr/>
+            
+        </ul>
+    </div>
+    <div class="headerShadow">
+        <div class="header">
+            <div id="navigation">
+                <nav id="letters">
+                    <span onclick="openNav()" style="font-size:30px; color: seashell; cursor:pointer;">&#9776;</span>  
+                    <a href="../html/home.html">Home</a>
+                    <a href="../html/aboutUs.html">About us</a>
+                    <a href="../html/contactUs.html">Contact us</a>
+                </nav>
+                 <nav id="logos">
+                    <div id="span"><span onclick="openNav()" style="font-size:140%; color: seashell; cursor:pointer;">&#9776;</span></div>
+                    <a href="../html/home.html">&#8962;</a>
+                    <a href="../html/aboutUs.html">&#8505;</a>
+                    <a href="../html/contactUs.html">&#9743;</a>
+                   
+                </nav>
+            </div>
+                <div id="logo">
+              <a href="home.html"><img id="Mystlogo" src="../resources/images/photo_2021-12-27_22-16-14.jpg" alt="Logo"></a>
+            </div>
+</div>
+</div>
+</header>
+<section id="upper">
+    <div class="upper-inner">
+            <div class="carousel-container">
+            <div class="carousel-content">
+             <h2 class="animate__animated animate__fadeInDown"><span>who  </span>we are</h2>      
+          </div>     
+          </div>
+    </div>
+</section>
+<section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>XO computer</h2>
+     
+        </div>
+      </div>
+<div class="note">
+    <p>
+        The XO computer is created by new entrepreneur Hailemikael Tilahun and it has been doing business in ethiopia since 2014E.C. 
+        so as an entrepreneur our mission is keeps us focus,accountable and give a flexible system for the customer.
+       
+    </p>
+
+    <h2 align="center" id="logo"> Terms of Service and Privacy Policy  </h2><br>
+    <p>  <b> Terms of Service</b> — you are welcome to use our services (which includes all of our products) at your own risk. However, there are a few rules to be followed: be polite, respect others, be responsible for your own actions, <a href="../html/contactUs.html" style="color: blue">Contact Us</a> if there is any issue or concern.  Most of what you will find through using or accessing our Services is readily available on the Internet for public use, but if you believe that content on the Services infringes your copyright, please <a href="../html/contactUs.html" style="color: blue">Contact Us</a>  immediately.<br>
+        <b>Privacy Policy </b>— all or part of information submitted by your direct or indirect access or use of service will be used to serve content on our Services along with personalized ads. We do not sell or disclose your personal information to any third party we are as well as doing everything possible to protect your personal data from unauthorized intruders. Should you have any concerns, please  <a href="../html/contact.html"  style="color: blue">Contact Us</a> us immediately.
+
+    </p>
+    </div>
+</section>
+<footer>
+     <div id="btm" class="feedback col-3">
+
+         <address>
+             call:<br>
+             +25112330800<br>
+             +25174442543
+         </address>
+     </div>
+     <div class="footer row">
+         <div class="col-9 followLinks">
+             <br><br>
+             <p>Follow us on </p>
+             <div id="btmlinks">
+                 <a href="https://fb.me/xocomputer.Et"><img src="../resources/images/fb2.png"></a>&nbsp;
+                 <a href="https://youtube.com/channel/UCLUnAhs-TPY6OTKWJ_fcw"><img src="../resources/images/download.jpg"></a>&nbsp;
+                 <a href="https://t.me/xocomputer"><img src="../resources/images/tg2.png"></a>&nbsp;
+                  <a href="https://t.me/+CVUv4zL96R40NjVK"><img src="../resources/images/tg2.png"></a>&nbsp;
+             </div>
+             <br><br>
+             <p style="font-size:16px; text-align:left; ">Copyright &copy; Mysteria 2021/22, all rights reserved </p>
+         </div>
+     </div>
+ </footer>
+ </body>
+ </html>
