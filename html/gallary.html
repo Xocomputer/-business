@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="charset" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="tsedey">
+    <meta name="description" content="webpage for business">
+    <meta name="keywords" content="computer">
+    <title>computer</title>
+<link rel="stylesheet" type="text/css" href="../css/gallarystyl.css">
+   
+    <script >
+    function openNav(){
+            document.getElementById("sideNav").style.width="18%";
+            //document.body.style.marginLeft="18%";
+            document.body.style.backgroundColor="rgba(0,0,0,0.7)";
+        }
+  function closeNav(){
+            document.getElementById("sideNav").style.width="0";
+            document.body.style.marginLeft="0";
+            document.body.style.backgroundColor="white";
+        }
+
+        </script>
+    
+    <style >
+	    * {
+  box-sizing:border-box;
+}
+
+body{
+font-family:"Lato", sans-serif;
+transition:background-color .5s;
+
+overflow:scroll;
+}
+ul{
+ 	list-style: none;
+ }
+ * a{
+color:white;
+text-decoration:none;
+ }
+a:visited{color:silver;}
+a:active{color:rgb(102, 255, 153);}
+
+.col-9 {width: 75%;}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row{
+padding:0;
+margin:0;
+width:100%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+@keyframes moving{
+    0%{background-size: 110% 110%;}
+    100%{background-size: 100% 100%;}
+}
+
+@keyframes logoMove{
+    0%{width:1px; height:auto;}
+    100%{ width:125px; height:auto;}
+}
+@media only screen and (max-width:600px){
+.header nav#letters{
+display:none;
+}
+.header nav#logos, nav#logos span{
+margin-left:0px;
+font-size:100%;
+}
+#span{
+position:relative;
+
+}
+}
+@media only screen and (min-width:600.99px){
+.header nav#logos{
+display:none;
+}
+}
+header{
+height:205px;
+margin:0,0,10px,0;
+padding:0,0,5px,0;
+background-color:rgba(1,1,1,.7);
+border-radius:0 0 10px 10px;
+position:fixed;
+top:0%;
+left:0;
+right:0;
+display:block;
+width:100%;
+max-width:100%;
+min-width:100%;
+max-height:205px;
+transition:margin-left .5s;
+z-index:1;
+}
+.header{
+max-height:180px;
+height: 180px;
+animation:moving 3s ;
+border-radius:0 0 10px 10px;
+clip-path:polygon(0 0, 100% 0, 100% 100%, 0 50%);
+background-image:url("../resources/images/bar.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+transition:margin-left .5s;
+padding:10px;
+margin-left:0px;
+/*background-color:rgb(80,80,80);*/
+}
+.header nav a{
+color:white;
+font-size:140%;
+font-family: Courier New, Lucida Console;
+text-shadow:1px 1px 2px #ffb03b;
+margin-left:5px;
+border-radius:20px;
+padding:7px;
+min-width:20%;
+}
+.header nav{
+max-width:50%;
+width:50%;
+float:left;
+padding:20px;
+margin-left:5px;
+}
+.header nav a:hover{
+ color:black;
+ text-shadow:1px 1px 2px #ffb03b;
+ opacity:0.8;
+ background-color:#ffb03b;
+}
+.headerShadow{
+filter:drop-shadow(5px 5px 5px rgb(80,80,80));
+}
+#Mystlogo{
+
+  border-radius: 50%;
+}
+#logo{
+top:10px;
+width:125px;
+height:auto;
+max-width:15%;
+min-width:5%;
+Border-radius:50%;
+float:right;
+background-color:rgba(210,166,121,0);
+margin-top:30px;
+margin-right:25px;
+box-shadow:5px 5px 5px black;
+position:relative;
+animation:logoMove 3s;
+}
+#Mystlogo{
+top:10px
+position:relative;
+max-width:100%;
+animation:logoMove 2.5s;
+}
+#
+#query{
+position:relative;
+width:60%;
+border-radius:18px;
+border-color:#ffb03b;
+padding:10px 10px;
+margin:5px 0;
+outline:none;
+background-color:rgba(0,0,0,.65);
+color:seashell;
+height:35px;
+}
+
+#sideNav{
+height:100%;
+width:0;
+position:fixed;
+z-index:1;
+top:0;
+left:0;
+background-color:#111;
+opacity:0.85;
+overflow-x:hidden;
+transition:0.5s;
+padding-top:60px;
+}
+#sideNav a{
+padding:8px 8px 8px 10px;
+text-align:left;
+text-decoration:none;
+font-family:poppins;
+font-size:110%;
+color:#ffb03b;
+display:block;
+transition:0.3s;
+}
+#sideNav a:hover{
+color:black;
+background-color:#ffb03b;
+opacity:0.8;
+}
+#sideNav .closebtn{
+position:absolute;
+top:0;
+right:15px;
+font-size:36px;
+margin-left:50px;
+}
+#sideNav hr{
+text-align:left;
+color:#ffb03b;
+opacity:0.6;
+width:90%;
+padding:0;
+}
+@media screen and ((max-height:450px) or (max-width:600px)){
+    #sideNav{padding-top:15px;}
+    #sideNav a{font-size:70%;}
+}
+
+#upper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(39, 37, 34, 0.8);
+  overflow: hidden;
+  padding: 0;
+}
+.ite{
+  width: 10.3;
+float: right;
+
+}
+.ite:hover img {
+  transform: scale(0.9);
+
+
+}
+#upper .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#upper .carousel-content {
+  text-align: center;
+}
+#upper h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+#upper h2 span {
+  color: #ffb03b;
+}
+#upper p {
+  width: 80%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
+#upper .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+#upper .carousel-inner .carousel-item,
+#upper .carousel-inner .active.carousel-item-start,
+#upper .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+#upper .carousel-inner .active,
+#upper .carousel-inner .carousel-item-next.carousel-item-start,
+#upper .carousel-inner .carousel-item-prev.carousel-item-end {
+font-family: 'Luxurious Roman', cursive;
+  opacity: 1;
+  transition: 0.5s;
+}
+#upper .carousel-inner .carousel-item-next,
+#upper .carousel-inner .carousel-item-prev,
+#upper .carousel-inner .active.carousel-item-start,
+#upper .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+#upper .carousel-control-next-icon, #upper .carousel-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.5);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#upper .carousel-control-next-icon:hover, #upper .carousel-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+#upper .carousel-indicators li {
+  cursor: pointer;
+}
+#upper .btn-menu, #upper .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 0 10px;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  color: #fff;
+  border: 2px solid #ffb03b;
+}
+#upper .btn-menu:hover, #upper .btn-book:hover {
+  background: #ffb03b;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #upper h2 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  #upperupper p {
+    width: 50%;
+  }
+  #upperupperupper .carousel-control-prev, #hero .carousel-control-next {
+    width: 5%;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .book-a-table-btn {
+    margin: 0 15px 0 0;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 700px){
+	#main{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+.gallery{
+	background-color: white;
+	display: grid;
+}
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #454035;
+  border-bottom: 3px solid #454035;
+   width: 300px;
+  height: 200px;
+}
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+
+
+}
+.main{
+	display: grid;
+ 	grid-template-columns: auto auto auto;
+ 	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	column-count: 3;
+	padding: 10px;
+}
+.items{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	padding: 30px 20px;
+	background-color: white;
+
+	border-radius: 25%;  
+ 
+
+  }
+  pre{
+    color: black;
+
+  }
+}
+.items h4{
+	color:white;
+	font-family: Luxurious Roman;
+	font-size: 20px; 
+}
+.items img{
+	width: 150%;
+	height: 300px;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 0.2s ease;
+	position: relative;
+	border-radius: 15%;
+	display: block;
+
+}
+
+.items:hover >img{
+	transform: scale(1.04);
+	
+}
+
+
+
+@media screen and (max-width: 700px){
+	.main{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+.details{
+	grid-template-rows: auto 1fr 20px;
+	grid-row-gap: 1px;
+	color: white;
+	vertical-align: center;
+}
+.sub-details{
+	grid-template-columns: auto auto auto;
+	text-align: left;
+}
+.sub-details h5{
+	font-weight: 1000;
+	font-size: 15px;
+}
+.sub-details .price{
+	text-align: center;
+	color: green;
+}
+
+footer{
+    box-sizing:border-box;
+    text-align: center;
+    background-color:rgba(1,1,1,.85);
+    border-radius:10px 10px 0 0;
+    color: #fff;
+    padding:0%;
+    margin:0px;
+    width:101.5%;
+    overflow:hidden;
+    position:relative;
+    top:1%;
+    left:-1%;
+    bottom:0;
+    top:80%;
+}
+.footer{
+	background-color: #24262b;
+	border-radius:15px 15px 0 0;
+    clip-path:polygon(0 70%,100% 0, 100% 100%,0 100%);
+    width:100%;
+    margin:0;
+    background-image:url("../resources/images/deliveryhead.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    box-shadow:5px 5px 5px rgb(80,80,80);
+}
+.footer p{
+font-size:20px;
+padding:1px;
+margin:1px;
+text-shadow:0px 0px 2px #ffb03b;
+}
+.followLinks{
+    font-family:courier new;
+    float:right;
+    position:relative;
+    left:15%;
+    }
+footer a{
+   text-decoration:none;
+   text-shadow:0px 0px 2px #ffb03b;
+}
+.followLinks a img{
+    width:20px;
+    height:20px;
+    z:index:1;
+}
+#tg{
+    width:20px;
+    height:20px;
+    z:index:1;
+
+}
+.followLinks a img:hover{
+    box-shadow:0px 0px 2px rgb(255,255,255);
+    transition:.3s;
+    z-index:2;
+    transform:scale(150%,150%);
+}
+#btmlinks{
+    height:23px;
+    margin-left:5%;
+}
+.feedback, .feedback a{
+    text-decoration:none;
+    font-family:courier new;
+    font-size:18px;
+    text-align:left;
+    color:#ffb03b;
+}
+.feedback address{
+    font-size:15px;
+}
+.feedback a:hover{
+    text-shadow:0px 0px 2px white;
+    }
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer.followLinks p{
+    font-size:12px;
+}
+}
+
+   </style>
+
+</head>
+
+
+<body style="background-image: url('imag3.png'); ">
+    
+<header class="row">
+    <div id="sideNav">
+        <a href="javascript:void(0) " class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <li><a href="../html/home.html"> home</a></li><hr/>
+         <li><a href="../html/gallary.html">Computer Gallary</a></li><hr/>
+            
+        </ul>
+    </div>
+    <div class="headerShadow">
+        <div class="header">
+            <div id="navigation">
+                <nav id="letters">
+                    <span onclick="openNav()" style="font-size:30px; color: seashell; cursor:pointer;">&#9776;</span>  
+                            <a href="home.html">Home</a>
+                    <a href="aboutUs.html">About us</a>
+                    <a href="contactUs.html">Contact us</a>
+                </nav>
+                 <nav id="logos">
+                    <div id="span"><span onclick="openNav()" style="font-size:140%; color: seashell; cursor:pointer;">&#9776;</span></div>
+                     <a href="../html/home.html">&#8962;</a>
+                    <a href="../html/aboutUs.html">&#8505;</a>
+                    <a href="../html/contactUs.html">&#9743;</a>
+                </nav>
+            </div>
+                <div id="logo">
+                       <a href="home.html"><img id="Mystlogo" src="../resources/images/photo_2021-12-27_22-16-14.jpg" alt="Logo"></a>
+            </div>
+</div>
+</div>
+</header>
+<section id="upper">
+    <div class="upper-inner">
+            <div class="carousel-container">
+            <div class="carousel-content">
+             <h2 class="animate__animated animate__fadeInDown"><span>XO Computer </span>gallary</h2>      
+          </div>     
+          </div>
+    </div>
+</section>
+
+    
+ <section id="gallery" class="gallery">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Some photos of currently avaliable computers </p>
+        </div>
+      </div>
+
+ <main >
+        <section>     
+ 
+		  <div class="ite" >
+            <img src="../resources/images/photo_2022-04-15_13-34-07.jpg" width="10.3%"  ><br> 
+               
+            
+                <pre >
+
+📌hp
+📌Elitebook
+📌6𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣
+📌 Core i5-6300U
+❤️4 Logical processors
+📌SSD 128🅖🅑 
+📌HDD 1000GB (1TB)
+📌Ram 8🅖🅑
+📌procesor speed 2.5Ghrz
+📌Screen size 14.1" Ultra slim  FHD
+💯 New  laptop
+🏷️ Price: 23000 birr 
+✄〰️
+                </pre>
+                </div>
+		
+		
+		
+         <div class="ite" >
+            <img src="../resources/images/photo_2022-04-15_13-57-49.jpg" width="33.3%"  ><br> 
+              <pre >
+               
+✍️ DELL G5 SPECIAL EDITION GAMING LAPTOP its more powerfull  graphics than 2060 RTX 
+
+ 🖍DELL  RYZEN 7 4800H 2.9GHZ (8 core) up to 4.2 GHz burst frequency 
+
+ Generation(2020 year ) Laptop with black edition with 6gb AMD graphics card. 
+
+🖍Full HD  screen resolution
+
+❇️10th  generation New  
+                  
+❇️Full HD  IPS micro-edge  Corning
+ Gorilla, with Eyes detect  
+
+❇️16GB DDR4L  RAM with 3200MHZ speed 
+ 
+❇️1TB NVME SSD(100 Times faster than Hard disk)
+
+ ❇️Edge to edge screen with IPS display
+
+❇️DTS  speakers
+
+ ❇️15.6" inch screen with Full HD resolution
+
+ ❇️Ultra-slim  DarkBlue-color
+
+🩸Price.....80000birr🩸              
+
+ </pre>
+       </div>
+		
+		
+		 <div class="ite" >
+            <img src="../resources/images/photo_2022-04-15_14-00-47.jpg" width="20.3%"  ><br> 
+              <pre >
+  
+  Hp Probook 450 G5
+
+☑️core i5 8th generation 
+
+☑️1 TB hdd storage
+
+☑️8 GB RAM
+
+☑️15.6 inch screen
+
+✔️6 hours and above battery life
+1 year warranty 
+
+Price.........34,500
+
+ </pre>
+       </div>
+		
+		 <div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-18-38.jpg" width="20.3%"  ><br> 
+              <pre >
+          ✍️11th Generation Hp Envy  Core i5 processor 
+🖍Touch screen Full HD screen 
+
+ 🖍Hp Envy  Core i5 11th Generation(2021 year ) Ultra-slim  Laptop with siliver   edition 
+
+🖍Full HD  screen resolution
+
+🖍Touch screen with Pen support
+
+❇️ 11th  generation New  
+
+❇️ Flip to X360 degree 
+
+❇️Full HD  IPS micro-edge  Corning
+ Gorilla, with Eyes detect  
+
+❇️8GB DDR4L  RAM with 3200MHZ speed 
+ 
+❇️256GB SSD(100 Times faster than Hard disk)
+
+ ❇️Edge to edge screen with IPS display
+
+❇️DTS  speakers
+
+ ❇️15.6 " inch screen with Full HD resolution
+
+ ❇️Ultra-slim Siliver -color
+
+🩸Price.....61000etb🩸
+
+ </pre>
+       </div>
+		
+		  </div>
+        <div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-25-25.jpg" width="20.3%"  ><br> 
+              <pre >
+     HP 250 G5 Notebook PC
+Processor: Core i3 5th generation
+Storage: 500GB
+RAM: 4GB
+ScreenSize: 15.6”
+Price: 15000
+New pc
+0912330800
+ማንኛውንም አይነት ላፕቶፕ ኮምፒውር እንሸጣለን እንገዛለን                      
+ 🖥  አዳዲስ ላፕቶፖች
+🖥  ዱባይ ዩዝድ ላፕቶፖች
+🖥  ዴስክቶፕ ኮምፒውተሮች አሉን:: 
+የኮምፒውተር ሶፍትዌሮችና መረጃዎች
+☎️   0912330800
+
+ </pre>
+       </div>
+
+	 
+	<div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-31-32.jpg" width="20.3%"  ><br> 
+              <pre >
+
+New arrival   Brand New Laptop 
+HIGH Spec   Power pavilion Gaming
+
+Core i5 9th generation
+ 
+Model : Hp power Pavilion gaming
+
+Condition: Brand New 
+
+ Screen :15.6 inch 1080p FHD
+
+📼 Storage : 256gb ssd   +1Tb hrddesk
+
+Ram : 8GB DDR4
+
+4GB NIVIDA GDDR6 1650TI GTX
+
+4hr.+ hours battery 
+
+Price : 58000  birr
+For more information 
+Call @0912330800
+ </pre>
+       </div>
+
+	     <img src="../resources/images/photo_2022-04-15_14-33-55.jpg" width="20.3%"  ><br> 
+              <pre >
+
+NEW DISCOUNT PRICE!!!
+🔵💻Hp slim elitbook
+intel® Core i5 5th generation
+Its 8gb Ram & 1TB HDD
+@2.3ghz😳
+up to 2.9ghz speed 😳 
+14.1 slim,mini, handy,powerful pc.
+Model : Hp Elitbook 840 G2 
+Condition: BRAND NEW!
+🔘GRAPHICS: intel HD graphics
+🖥 Screen :14.1 inch 1080p FHD 
+📼 Storage : 1TB HDD
+⏳Ram : 8gb DDR3L😳
+🔋:5hr.+ hours battery life 👌
+👉White keyboard backlit
+👉HD Sound system
+👉BAG + ORGINAL BATTERY+changer
+💵Price :19500birr FIXED🙊🙊🙊
+(Touch screen 20500)            
+☎️ call:
+0912330800
+
+ </pre>
+       </div>
+	 
+	  <div class="ite" >
+           
+                    
+                    <img src="../resources/images/photo_2022-04-15_14-36-31.jpg" width="20.3%"  ><br> 
+              <pre >
+       🔵💻Hp slim elitbook 
+Slim Core i5 6th Generation 
+@2.5 up to@2.9ghz Turbo Speed
+Model : Hp Elitbook 840 G3 6th gen.
+Condition: Brand New 
+🔘GRAPHICS: intel HD graphics 520
+🖥 Screen :14.1inch 1080p FHD 
+📼 Storage : 1TB HDD
+⏳Ram : 8gb DDR4
+🔋:6hr.+ hours battery life  
+👉white keyboard backlit
+👉finger print support
+👉HD Sound system
+💵Price :20000birr🙊🙊🙊
+☎️ call:0912330800
+
+ </pre>
+       </div>
+       <div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-39-11.jpg" width="20.3%"  ><br> 
+              <pre >
+     <h3>  ɴᴇᴡʟʏ ᴀʀʀɪᴠᴇᴅ😍 </h3>
+
+⚜️ʟᴇɴᴏᴠᴏ 🅨🅞🅖🅐 7i 11th Gen (2021) ⚜️
+
+💎  🅟𝙧𝙞𝙘𝙚 💵  call
+
+11th-ɢᴇɴ ɪɴᴛᴇʟ® ᴄᴏʀᴇ™i5-1165G7 ᴘʀᴏᴄᴇssᴏʀ ᴛɪɢᴇʀ ʟᴀᴋᴇ's ᴄᴘᴜ🥶
+
+ɪʀɪs® Xe ɢʀᴀᴘʜɪᴄs, ʏᴏᴜʀ ᴠɪsᴜᴀʟs ᴡɪʟʟ ᴘᴏᴘ
+
+iɴᴛᴇʟ ᴄᴏʀᴇ i5-1135G7 @4.70ɢʜᴢ
+
+💎4 ᴄᴏʀᴇs ᴡɪᴛʜ 8 ʟᴏɢɪᴄᴀʟl ᴘʀᴏᴄᴇssᴏʀ💎
+
+8CPU's 2.4GHz  - 4.7GHz Clock Speed.
+
+512GB PCIe® NVMe™ M.2 SSD 🤯
+
+12GB DDR6 RAM
+
+14.1 FHD (1920 *1080)Beautiful Display
+
+Color : ᴅᴀʀᴋ ᴍᴏss😍
+
+🅟𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 𝙬𝙞𝙣𝙙𝙤𝙬𝙨 11💎
+
+🛡Including 1Year Warranty 🛡
+ </pre>
+       </div>
+
+</div>
+       <div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-42-21.jpg" width="20.3%"  ><br> 
+              <pre >
+
+       ＮＥＷ Ａｒｒｉｖａｌｓ💎
+
+⚜️ᴅᴇʟʟ "ＸＰＳ 13" ⚜️
+
+👉🅟Ʀɪᴄᴇ 52,000 ETB fixed
+
+✨intel core i7 8th generation
+✨Model : xps 13
+✨🅢𝙩𝙖𝙩𝙪𝙨: brand new
+✨Screen :13.3inch 🅢ᴄʀᴇᴇɴ (1920 x 1080)fHD thin bezel
+Storage : 256gb ssd
+✨Ram : 8GB DDR4
+✨🔋:10hr+ hours battery life 
+✨ keyboard backlit
+✨HD Sound system
+ </pre>
+       </div>
+	 
+	 <div class="ite" >
+           
+                    <img src="../resources/images/photo_2022-04-15_14-53-57.jpg" width="20.3%"  ><br> 
+              <pre >
+
+     BOOKED IT FIRST
+
+⚜️ ASUS TUF Dash F15 (2021)⚜️ 11th gen❤️❤️
+PACKED WITH BOX
+✨༒☬𝐍𝐕𝐈𝐃𝐈𝐀® 𝐆𝐞𝐅𝐨𝐫𝐜𝐞 𝐑𝐓𝐗™ 𝟑𝟎𝟔𝟎 𝟔𝐆𝐁 𝐆𝐃𝐃𝐑𝟔☬✨
+✨Intel® Core™ i7-11375H Processor ✨
+🔰3.3 GHz, 6 cores (12M Cache, up to 5.0 GHz)
+✨15.6-inch,FHD (1920 x 1080) 16:9,anti-glare display,Refresh Rate:144Hz,Value IPS-level
+✨512GB M.2 NVMe™ PCIe® 3.0 SSD
+✨16GB DDR4 on board 
+✨Weight 2.00 Kg (4.41 lbs)
+✨Model :Asus TUF fx516pm-211.tf15 
+✨THUNDERBOLT 4 TYPE-C CHARGING
+✨USB power delivery FAST CHARGING
+✨16.6 HOURS( We didnt test this)
+✨PRECISION STRIKES Backlit Chiclet Keyboard
+✨DTS software
+✨Built-in array microphone
+✨2x 2W speaker
+✨Wi-Fi 6(802.11ax)+Bluetooth 5.1 (Dual band) 
+✨MILITARY-GRADE TOUGHNESS
+
+Price  114,500  birr fixed
+ </pre>
+       </div>
+
+
+ <div class="ite" >
+           
+              <img src="../resources/images/photo_2022-04-15_15-01-18.jpg" width="20.3%"  ><br> 
+              <pre >
+
+     ⚜️🅢ᴛᴜɴɴɪɴɢ ɪɴsɪᴅᴇ & ᴏᴜᴛ⚜️
+
+⚜️ᴅᴇʟʟ 🅧🅟🅢 7390 13 2-in-1 Laptop⚜️
+
+  💎 4ᴋ ʀᴇsᴏʟᴜᴛɪᴏɴ & ᴛᴏᴜᴄʜ sᴄʀᴇᴇɴ 💎
+
+Price:  72,500birr
+
+                             🔰Specifications🔻
+
+✨10th Gen Intel® Core™ i7-1065G7 Quad-Core Processor
+2.60GHz ...3.50GHz
+✨4 Cores (8Logical Processor )
+✨13.3" 4K (3840*2160)💎 
+💎 X360 Rotation Touch Screen Panel💎
+✨w/ 4.9 mm slim side bezel
+✨512GB PCIe® NVMe™ M.2 SSD 🤯
+✨16GB dual-channel (Built-in)🤯
+✨Single-zone White Backlit Keyboard™
+✨US Layout
+✨Windows 10 Home
+🛡Including 1Year Warranty 🛡
+ </pre>
+       </div>
+
+<div class="ite" >
+           
+              <img src="../resources/images/photo_2022-04-15_15-04-39.jpg" width="20.3%"  ><br> 
+              <pre >
+
+     📌lenovo
+📌5𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤n
+📌 AMD A6(Core i5)
+❤️4 Logical processors
+📌HDD 500🅖🅑 
+📌Ram 8🅖🅑
+❤️2GB Radion HD Graphics Card
+📌procesor speed 2.7Ghrz
+📌Screen size 15.6" 
+💯 Dubai Used laptop
+🏷️ Price: 11,000 birr 
+✄〰️
+ </pre>
+       </div>
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-07-50.jpg" width="20.3%"  ><br> 
+              <pre >
+
+   📌Dell
+📌Venue 11 pro
+📌4𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤n
+📌 Core i3
+❤️4 Logical processors
+📌SSD 128🅖🅑 
+📌Ram 4🅖🅑
+📌procesor speed 2.0Ghrz
+📌Screen size 10.1" 
+❤️Touch Screen
+❤️Detachebl
+❤️Battery life 6 hours
+💯 Dubai Used laptop
+🏷️ Price: 15.500 birr 
+ </pre>
+       </div>
+
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-09-03.jpg" width="20.3%"  ><br> 
+              <pre >
+📌apple
+📌Mackbook
+❤️2012 Model
+📌Core i7
+📌HDD 750🅖🅑 
+📌Ram 8🅖🅑 
+📌procesor speed 2.2Ghrz
+❤️cycle count 15 
+📌Screen size 15.6"
+💯 New laptop
+🏷️ Price: 29.5000 birr 
+ </pre>
+       </div>
+
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-12-24.jpg" width="20.3%"  ><br> 
+              <pre >
+📌hp
+📌probook 650
+📌4𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣
+📌 Core i7-4510U
+❤️8 Logical processors
+📌HDD 1000🅖🅑 
+📌Ram 8🅖🅑
+📌procesor speed 3.0Ghrz
+📌Screen size 15.6" Ultra slim  
+💯 Dubai Used laptop
+🏷️ Price: 23.000 birr 
+ </pre>
+       </div>
+
+
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-13-44.jpg" width="20.3%"  ><br> 
+              <pre >
+📌hp
+📌hp mini
+📌 Core Dual
+📌HDD 320🅖🅑 
+📌Ram 4🅖🅑
+📌procesor speed 2.0Ghrz
+📌Screen size 10.1" 
+💯 Used laptop
+🏷️ Price: 6500 birr 
+ </pre>
+       </div>
+
+
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-26-16.jpg" width="20.3%"  ><br> 
+              <pre >
+Dell Inspiron 7560
+Processor: Core i7 7th generation 2.9GHz
+Storage: 256GB SSD
+RAM: 16GB
+Graphics: 2GB GTX 940MX
+ScreenSize: 15.6” FULL HD 1080p
+Battery: 4hrs
+KeyBoard BackLight
+Price: 34,500
+ </pre>
+       </div>
+
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-30-58.jpg" width="20.3%"  ><br> 
+              <pre >
+HP EliteBook 840 G4
+Processor: Core i5 7th generation vPro
+Storage: 1TB
+RAM: 8GB 
+Battery: 5hrs+
+ScreenSize: 15.6”
+Keyboard Backlight 
+Price: 30000
+ </pre>
+       </div>
+
+<div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-33-15.jpg" width="20.3%"  ><br> 
+              <pre >
+📌hp
+📌probook 650
+📌4𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤𝙣
+📌 Core i7-4510U
+❤️8 Logical processors
+📌HDD 1000🅖🅑 
+📌Ram 8🅖🅑
+📌procesor speed 3.0Ghrz
+📌Screen size 15.6" Ultra slim  
+💯 Dubai Used laptop
+🏷️ Price: 25000 birr 
+ </pre>
+       </div>
+       <div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-34-08.jpg" width="20.3%"  ><br> 
+              <pre >
+📌apple
+📌Mackbook
+❤️2012 Model
+📌Core i7
+📌HDD 750🅖🅑 
+📌Ram 8🅖🅑 
+📌procesor speed 2.2Ghrz
+❤️cycle count 15 
+📌Screen size 15.6"
+💯 New laptop
+🏷 Price: 30,000 birr 
+ </pre>
+       </div>
+  <div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-34-43.jpg" width="20.3%"  ><br> 
+              <pre >
+HP Pavilion 
+Processor: Core i5 8th gen
+Storage: 1TB 
+RAM: 8GB
+ScreenSize: 15.6”
+Price: 34000
+ </pre>
+       </div>
+  <div class="ite" >
+ 
+              <img src="../resources/images/photo_2022-04-15_15-38-07.jpg" width="20.3%"  ><br> 
+              <pre >
+   📌Toshiba
+📌Satellite 
+📌5𝙩𝙝 𝙜𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙤n
+📌 AMD E1(Core i3)
+❤️4 Logical processors
+📌HDD 500🅖🅑 
+📌Ram 6🅖🅑
+❤️2GB Radion HD Graphics Card
+📌procesor speed 2.0Ghrz
+📌Screen size 15.6" 
+💯 Dubai Used laptop
+🏷️ Price: 11,500 birr 
+ </pre>
+       </div>
+  <div class="ite" >
+          <img src="../resources/images/photo_2022-04-15_15-39-16.jpg" width="20.3%"  ><br> 
+              <pre >
+   Lenovo
+Processor: Core i7 4th generation
+Storage: 1TB
+RAM: 8GB
+Graphics: 4GB GTX 850M
+ScreenSize: 15.6”
+Price: 30000
+ </pre>
+       </div>
+             <div class="ite" >
+          <img src="../resources/images/photo_2022-04-15_15-41-46.jpg" width="20.3%"  ><br> 
+              <pre >
+Processor: AMD E2-7110 APU with AMD 
+7th generation
+Radeon R2 Graphics
+RAM: 4GB 
+Storage: 500GB
+DDR3 RAM
+ </pre>
+       </div>
+         <div class="ite" >
+<img src="../resources/images/photo_2022-04-15_15-42-33.jpg" width="20.3%"  ><br> 
+              <pre >
+Lenovo ThinkPad T410
+Processor: Core i5
+Storage: 500GB
+RAM: 4GB
+ScreenSize: 14”
+Price: 17000
+ </pre>
+       </div>
+	 
+	
+	
+         <div class="ite" >
+<img src="../resources/images/photo_2022-04-15_16-23-04.jpg" width="20.3%"  ><br> 
+              <pre >
+Razer Blade 15
+Display:
+FullHD 1080p IPS 144hz display
+Processor:
+Intel core i7-11800H 8 cores/16 thread upto 4.6 Ghz
+Graphics:
+Nvidia RTX 3070 8gb Gddr6 Graphics card
+Storage:
+512gb m.2 ssd
+Ram:
+16gb 3200A DDR4 ram
+RGB Keyboard
+ </pre>
+       </div>
+
+       <div class="ite" >
+<img src="../resources/images/photo_2022-04-15_16-24-34.jpg" width="20.3%"  ><br> 
+              <pre >
+Premium HP OMEN 15
+
+15.6" FHD display @ 300Hz
+10th Gen Intel Core i7-10750H
+16GB DDR4 RAM
+1TB  NVME SSD
+
+NVIDIA GeForce RTX 2060 6GB
+
+WiFi 6 - 802.11
+
+Price    99000
+ </pre>
+       </div>
+       
+       <div class="ite" >
+<img src="../resources/images/photo_2022-04-15_16-26-21.jpg" width="20.3%"  ><br> 
+              <pre >
+📌HP
+📌Elitebook Folio
+📌 Core i5
+❤️5th Generation
+❤️4 Logical processors
+❤️📌HDD 500🅖🅑 
+📌Ram 4🅖🅑
+📌procesor speed 2.5Ghrz
+📌Screen size 14.1" 
+❤️Keyboard light
+💯 Dubai Used laptop
+🏷️ Price: 21.500 
+ </pre>
+       </div>
+        </section>
+
+        </main>
+ <footer>
+     <div id="btm" class="feedback col-3">
+
+         <address>
+             call:<br>
+             +25112330800<br>
+             +25174442543
+         </address>
+     </div>
+     <div class="footer row">
+         <div class="col-9 followLinks">
+             <br><br>
+             <p>Follow us on </p>
+             <div id="btmlinks">
+                 <a href="https://fb.me/xocomputer.Et"><img src="../resources/images/fb2.png"></a>&nbsp;
+                 <a href="https://youtube.com/channel/UCLUnAhs-TPY6OTKWJbJ_fcw"><img src="../resources/images/download.jpg"></a>&nbsp;
+                 <a href="https://t.me/xocomputer"><img src="../resources/images/tg2.png"></a>&nbsp;
+                  <a href="https://t.me/+CVUv4zL96R40NjVK"><img src="../resources/images/tg2.png"></a>&nbsp;
+             </div>
+             <br><br>
+             <p style="font-size:16px; text-align:left; ">Copyright &copy; Mysteria 2021/22, all rights reserved </p>
+         </div>
+     </div>
+ </footer>
+</body>
+</html>
+
+</body>
+</html>
